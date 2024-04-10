@@ -79,6 +79,9 @@ test:
 #
 production:
   <<: *default
-  database: oasobi_production
-  username: oasobi
-  password: <%= ENV["OASOBI_DATABASE_PASSWORD"] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5 
+  # database: oasobi_production
+  # username: oasobi
+  # password: <%= ENV["OASOBI_DATABASE_PASSWORD"] %>
