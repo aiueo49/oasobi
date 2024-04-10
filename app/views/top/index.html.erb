@@ -1,1 +1,12 @@
 top#indexとはここじゃよ
+
+<% if logged_in? %>
+  <p>ログイン中</p>
+  <p><%= link_to "ログアウト", logout_path, method: :delete, data: { turbo_method: :delete } %></p>
+<% else %>
+  <p>ログアウト中</p>
+  <p><%= link_to "ログイン", login_path %></p>
+  <p><%= link_to "新規登録", new_user_path %></p>
+<% end %>
+
+
