@@ -1,15 +1,16 @@
-<div class="font-bold">
-  top#indexとはここじゃよ
-</div>
+<div>
+  <div class="font-bold">
+    top#indexとはここじゃよ
+  </div>
 
-<div class="flex">
- <% if logged_in? %>
-   <p>ログイン中</p>
-   <p><%= link_to "ログアウト", logout_path, method: :delete, data: { turbo_method: :delete } %></p>
- <% else %>
-   <p>ログアウト中</p>
-   <p class="btn"><%= link_to "ログイン", login_path %></p>
-   <p class="btn"><%= link_to "新規登録", new_user_path %></p>
- <% end %>
+  <div class="flex">
+   <% if logged_in? %>
+     <p>ログイン中</p>
+    <%= link_to "ログアウト", logout_path, method: :delete, data: { turbo_method: :delete }, class: 'btn' %>
+   <% else %>
+     <p>ログアウト中</p>
+     <%= link_to "ログイン", login_path, class: 'btn' %>
+     <%= link_to "新規登録", new_user_path, class: 'btn' %>
+   <% end %>
+  </div>
 </div>
-

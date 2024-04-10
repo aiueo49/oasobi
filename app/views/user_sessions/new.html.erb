@@ -1,16 +1,36 @@
-<h1>ログインページとはここじゃよ</h1>
 <div>
- <%= form_with url: login_path do |f| %>
-   <%= f.label :name %>
-   <%= f.text_field :name %>
+ <h1>ログインページはここじゃよ</h1>
+ <%= form_with url: login_path, data: { turbo: false } do |f| %>
+   <div> 
+     <div> 
+       <%= f.label :name %>
+     </div>
+     <div>
+       <%= f.text_field :name %>
+     </div>
+   </div>
 
-   <%= f.label :email %>
-   <%= f.email_field :email %>
+   <div>
+     <div>
+       <%= f.label :email %>
+     </div>
+     <div>
+       <%= f.email_field :email %>
+     </div>
+   </div>
 
-   <%= f.label :password %>
-   <%= f.password_field :password %>
+   <div>
+     <div>
+       <%= f.label :password %>
+     </div>
+     <div>
+       <%= f.password_field :password %>
+     </div>
+   </div>
 
-   <%= f.submit %>
+   <div>
+     <%= f.submit 'ログイン', class: 'btn' %>
+   </div>
  <% end %>
 </div>
 

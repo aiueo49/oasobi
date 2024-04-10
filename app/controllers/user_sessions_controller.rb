@@ -2,8 +2,8 @@ class UserSessionsController < ApplicationController
   def new; end
 
   def create
-    @user = login(params[:email], params[:password]) 
-    if @user.save
+    @user = login(params[:name], params[:email], params[:password]) 
+    if @user.present? && @user.save
       redirect_to root_path, notice: 'Login successful'
     else
       flash.now[:alert] = 'Login failed'
