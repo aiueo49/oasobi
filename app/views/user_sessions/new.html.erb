@@ -1,6 +1,6 @@
 <div>
  <h1>ログインページはここじゃよ</h1>
- <%= form_with url: login_path, data: { turbo: false } do |f| %>
+ <%= form_with model: @user, url: login_path, data: { turbo: false } do |f| %>
    <div> 
      <div> 
        <%= f.label :name %>
